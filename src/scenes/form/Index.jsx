@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
+import "./Form.css";
 
 const initialValues = {
   firstName: "",
@@ -39,11 +40,7 @@ const Form = () => {
       <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={userSchema}>
         {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
           <form>
-            <Box
-              display="grid"
-              gap="30px"
-              gridTemplateColumns="repeat(4, minmax(0, 1fr))"
-              sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" } }}>
+            <Box className="form" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" } }}>
               <TextField
                 fullWidth
                 variant="filled"
@@ -123,7 +120,7 @@ const Form = () => {
                 sx={{ gridColumn: "span 4" }}
               />
             </Box>
-            <Box display="flex" justifyContent="end" mt="20px">
+            <Box className="user-button">
               <Button type="submit" color="secondary" variant="contained">
                 Create new user
               </Button>

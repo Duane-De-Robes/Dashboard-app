@@ -1,0 +1,16 @@
+/* SIDEBAR */
+.sidebar {
+  display: flex;
+  justify-content: space-between;
+}
+.main {
+  flex: 1 1 20%;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* CALENDAR */
+.calendar {
+  flex: 1 1 100%;
+  margin-left: 15px;
+}

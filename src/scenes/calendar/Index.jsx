@@ -8,6 +8,7 @@ import listPlugin from "@fullcalendar/list";
 import { Box, List, ListItem, ListItemText, Typography, useTheme } from "@mui/material";
 import Header from "../../components/Header";
 import { tokens } from "../../Theme";
+import "./Calendar.css";
 
 const Calendar = () => {
   const theme = useTheme();
@@ -38,9 +39,9 @@ const Calendar = () => {
     <Box m="20px">
       <Header title="CALENDAR" subtitle="Full Calendar Interactive Page" />
 
-      <Box display="flex" justifyContent="space-between">
+      <Box className="sidebar">
         {/* CALENDAR SIDEBAR */}
-        <Box flex="1 1 20%" backgroundColor={colors.primary[400]} p="15px" borderRadius="4px">
+        <Box className="main" backgroundColor={colors.primary[400]}>
           <Typography variant="h5">Events</Typography>
           <List>
             {currentEvents.map((event) => (
@@ -65,7 +66,7 @@ const Calendar = () => {
         </Box>
 
         {/* CALENDAR */}
-        <Box flex="1 1 100%" ml="15px">
+        <Box className="calendar">
           <FullCalendar
             height="75vh"
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
