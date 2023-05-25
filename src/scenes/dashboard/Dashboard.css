@@ -1,0 +1,61 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.charts {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 140px;
+  gap: 20px;
+}
+.statbox {
+  grid-column: span 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row-2 {
+  grid-column: span 8;
+  grid-row: span 2;
+}
+.line-header {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.graph-box {
+  height: 275px;
+  margin-top: -20px;
+}
+.transactions-main {
+  grid-column: span 4;
+  grid-row: span 2;
+  overflow: auto;
+}
+.transactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.transactions-amount {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.row-3 {
+  grid-column: span 4;
+  grid-row: span 2;
+  padding: 30px;
+}
+.progress-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+.sales-quantity {
+  grid-column: span 4;
+  grid-row: span 2;
+}

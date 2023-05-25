@@ -4,6 +4,7 @@ import { tokens } from "../../Theme";
 import { mockDataContacts } from "../../data/MockData";
 import { useTheme } from "@mui/material";
 import Header from "../../components/Header";
+import "./Contacts.css";
 
 const Contacts = () => {
   const theme = useTheme();
@@ -25,8 +26,7 @@ const Contacts = () => {
     <Box m="20px">
       <Header title="CONTACTS" subtitle="List of Contacts for Future Reference" />
       <Box
-        m="40px 0 0 0"
-        height="75vh"
+        className="main"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",

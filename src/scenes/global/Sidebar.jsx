@@ -16,6 +16,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import "./SidebarAdmin.css";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -69,7 +70,7 @@ const Sidebar = () => {
               color: colors.grey[100],
             }}>
             {!isCollapsed && (
-              <Box display="flex" justifyContent="space-between" alignItems="center" ml="15px">
+              <Box className="sidebar-header">
                 <Typography variant="h3" color={colors.grey[100]}>
                   ADMIN
                 </Typography>
@@ -83,7 +84,7 @@ const Sidebar = () => {
           {/* USER */}
           {!isCollapsed && (
             <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center">
+              <Box className="admin-picture">
                 <img
                   alt="profile-user"
                   width="100px"

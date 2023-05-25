@@ -1,0 +1,10 @@
+.form {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, minmax(0, fr));
+}
+.user-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
